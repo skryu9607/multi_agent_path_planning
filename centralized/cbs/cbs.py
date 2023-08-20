@@ -5,6 +5,7 @@ Python implementation of Conflict-based search
 author: Ashwin Bose (@atb033)
 
 """
+import os
 import sys
 sys.path.insert(0, '../')
 import argparse
@@ -12,8 +13,9 @@ import yaml
 from math import fabs
 from itertools import combinations
 from copy import deepcopy
-
-from cbs.a_star import AStar
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) +
+                "/../../")
+from a_star import AStar
 
 class Location(object):
     def __init__(self, x=-1, y=-1):
